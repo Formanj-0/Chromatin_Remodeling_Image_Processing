@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImageMetadata>
+  <CustomAttributes>
+    <OverviewImageScalingFactor>1</OverviewImageScalingFactor>
+  </CustomAttributes>
+  <Information>
+    <Document>
+      <UserName>zeiss</UserName>
+    </Document>
+    <Image>
+      <SizeX>1115</SizeX>
+      <SizeY>943</SizeY>
+      <OriginalEncodingQuality>100</OriginalEncodingQuality>
+      <PixelType>Bgr24</PixelType>
+      <ComponentBitCount>8</ComponentBitCount>
+      <Dimensions>
+        <Channels>
+          <Channel Id="Channel:0">
+            <PixelType>Bgr24</PixelType>
+            <ComponentBitCount>8</ComponentBitCount>
+          </Channel>
+        </Channels>
+        <T>
+          <StartTime>0001-01-01T00:00:00</StartTime>
+        </T>
+        <Z>
+          <XYZHandedness>Undefined</XYZHandedness>
+          <ZAxisDirection>Undefined</ZAxisDirection>
+          <StartPosition>0</StartPosition>
+        </Z>
+      </Dimensions>
+    </Image>
+  </Information>
+  <Scaling>
+    <Metadata />
+    <AutoScaling>
+      <Type>Measured</Type>
+      <Objective>Objective.420640-9900-000</Objective>
+      <Optovar>Aquila.Tubelens 1.0x</Optovar>
+      <Reflector>Reflector.none</Reflector>
+      <CameraAdapter>CameraAdapter.1xCSU</CameraAdapter>
+      <ObjectiveName>Plan-Apochromat 10x/0.45 M27</ObjectiveName>
+      <OptovarMagnification>1</OptovarMagnification>
+      <ReflectorMagnification>1</ReflectorMagnification>
+      <CameraName>Axiocam 705</CameraName>
+      <CameraAdapterMagnification>1</CameraAdapterMagnification>
+      <CameraPixelDistance>3.45,3.45</CameraPixelDistance>
+      <CreationDateTime>04/12/2022 22:24:48</CreationDateTime>
+    </AutoScaling>
+    <Items>
+      <Distance Id="X">
+        <Value>7.5219512195121954E-07</Value>
+        <DefaultUnitFormat>µm</DefaultUnitFormat>
+      </Distance>
+      <Distance Id="Y">
+        <Value>7.5219512195121954E-07</Value>
+        <DefaultUnitFormat>µm</DefaultUnitFormat>
+      </Distance>
+    </Items>
+  </Scaling>
+  <DisplaySetting>
+    <Channels>
+      <Channel Id="Channel:0" Name="C1">
+        <BitCountRange>8</BitCountRange>
+        <PixelType>Bgr24</PixelType>
+        <DyeName>Dye1</DyeName>
+        <ColorMode>None</ColorMode>
+      </Channel>
+    </Channels>
+    <ToneMapping>
+      <Mode>None</Mode>
+      <EnhanceClipLimit>3</EnhanceClipLimit>
+      <EnhanceRegionSizePercentage>15</EnhanceRegionSizePercentage>
+    </ToneMapping>
+    <ViewerRotations>0</ViewerRotations>
+  </DisplaySetting>
+  <Layers />
+</ImageMetadata>

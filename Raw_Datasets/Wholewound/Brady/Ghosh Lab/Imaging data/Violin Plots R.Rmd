@@ -1,0 +1,25 @@
+[12:21 PM] Kaonis,Samantha
+```{r setup, include=FALSE, message = FALSE, echo = FALSE, warning = FALSE}
+library(knitr)
+library(tidyverse)
+library(car)
+library(ggplot2)
+library(ggsignif)
+library(patchwork)
+```
+
+```{r }
+data <- read.csv("C:/Users/wrest/OneDrive/Documents/Fifth Year-DESKTOP-P7DLT30/Ghosh Lab/Imaging data/11_3_21 - Raw/11_3_21 - violin - wound - 12-14hr.csv")
+data$WELL <- as.factor(data$WELL)
+```
+
+```{r }
+ggplot(data, aes(WELL, TRACK_DISPLACEMENT)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Control Track Displacement (μm)")
+
+ggplot(data, aes(WELL, TOTAL_DISTANCE_TRAVELED)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Control Track Distance (μm)")
+
+ggplot(data, aes(WELL, TRACK_MEAN_SPEED)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Control Mean Speed (μm/s)")
+
+ggplot(data, aes(WELL, LINEARITY_OF_FORWARD_PROGRESSION)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Control Linearity of Forward Progression")
+# + geom_signif(comparisons=list(c("1","2"), c("2","3"), ))
+```

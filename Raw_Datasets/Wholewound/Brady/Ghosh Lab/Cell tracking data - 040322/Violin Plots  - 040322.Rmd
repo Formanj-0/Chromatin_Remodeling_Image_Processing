@@ -1,0 +1,36 @@
+[12:21 PM] Kaonis,Samantha
+```{r setup, include=FALSE, message = FALSE, echo = FALSE, warning = FALSE}
+library(knitr)
+library(tidyverse)
+library(car)
+library(ggplot2)
+library(ggsignif)
+library(patchwork)
+```
+
+```{r }
+dataW <- read.csv("C:/Users/wrest/OneDrive/Documents/Fifth Year-DESKTOP-P7DLT30/Ghosh Lab/Cell tracking data - 040322/Wound_Violin_040322.csv")
+dataW$WELL <- as.factor(dataW$TREATMENT)
+dataA <- read.csv("C:/Users/wrest/OneDrive/Documents/Fifth Year-DESKTOP-P7DLT30/Ghosh Lab/Cell tracking data - 040322/All_Violin_040322.csv")
+dataA$WELL <- as.factor(dataA$TREATMENT)
+```
+
+```{r }
+ggplot(dataW, aes(TREATMENT, TRACK_DISPLACEMENT)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Track Displacement (μm)") + geom_signif(comparisons=list(c("Control","GSK")), y_position = 115) + geom_signif(comparisons=list(c("Control","TSA")), y_position = 122) + geom_signif(comparisons=list(c("GSK","TSA")), y_position = 115)
+
+ggplot(dataW, aes(TREATMENT, TOTAL_DISTANCE_TRAVELED)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Track Distance (μm)") + geom_signif(comparisons=list(c("Control","GSK")), y_position = 115) + geom_signif(comparisons=list(c("Control","TSA")), y_position = 125) + geom_signif(comparisons=list(c("GSK","TSA")), y_position = 115)
+
+ggplot(dataW, aes(TREATMENT, TRACK_MEAN_SPEED)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Mean Speed (μm/s)")+ geom_signif(comparisons=list(c("Control","GSK")), y_position = 0.0048) + geom_signif(comparisons=list(c("Control","TSA")), y_position = 0.0055) + geom_signif(comparisons=list(c("GSK","TSA")), y_position = 0.0048)
+
+ggplot(dataW, aes(TREATMENT, LINEARITY_OF_FORWARD_PROGRESSION)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Linearity of Forward Progression") + geom_signif(comparisons=list(c("Control","GSK"), c("Control","TSA")))
+```
+
+```{r }
+ggplot(dataA, aes(TREATMENT, TRACK_DISPLACEMENT)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Track Displacement (μm)") + geom_signif(comparisons=list(c("Control","GSK"), c("Control","TSA")))
+
+ggplot(dataA, aes(TREATMENT, TOTAL_DISTANCE_TRAVELED)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Track Distance (μm)") + geom_signif(comparisons=list(c("Control","GSK"), c("Control","TSA")))
+
+ggplot(dataA, aes(TREATMENT, TRACK_MEAN_SPEED)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Mean Speed (μm/s)") + geom_signif(comparisons=list(c("Control","GSK"), c("Control","TSA")))
+
+ggplot(dataA, aes(TREATMENT, LINEARITY_OF_FORWARD_PROGRESSION)) + geom_violin(trim = FALSE) + theme_classic() + geom_boxplot(width = 0.1) + labs(title = "Linearity of Forward Progression") + geom_signif(comparisons=list(c("Control","GSK"), c("Control","TSA")))
+```
