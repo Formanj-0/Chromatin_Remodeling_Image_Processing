@@ -1,0 +1,2 @@
+Refnumb	Area	Aspect ratio	Radii ratio	Circularity^-1	Area over box	NII	Roundness	Solidity
+1	278.370	1.690	1.902	1.280	0.667	4.206	0.592	0.987
